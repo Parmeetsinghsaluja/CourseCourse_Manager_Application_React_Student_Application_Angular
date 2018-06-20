@@ -1,7 +1,7 @@
 export class UserServiceClient {
 
   findUserById(userId) {
-    return fetch('http://localhost:4000/api/user/' + userId)
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/user/' + userId)
       .then(response => response.json());
   }
 
@@ -10,7 +10,7 @@ export class UserServiceClient {
       username: username,
       password: password
     };
-    return fetch('http://localhost:4000/api/login', {
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/login', {
       method: 'post',
       body: JSON.stringify(credentials),
       credentials: 'include',
@@ -21,14 +21,14 @@ export class UserServiceClient {
   }
 
   logout() {
-    return fetch('http://localhost:4000/api/logout', {
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/logout', {
       method: 'post',
       credentials: 'include'
     });
   }
 
   profile() {
-    return fetch('http://localhost:4000/api/profile',
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/profile',
       {
         credentials: 'include', // include, same-origin, *omit
       })
@@ -45,7 +45,7 @@ export class UserServiceClient {
       address: address,
       phoneNumber: phoneNumber
     };
-    return fetch('http://localhost:4000/api/user', {
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/user', {
       body: JSON.stringify(user),
       credentials: 'include', // include, same-origin, *omit
       method: 'put',
@@ -61,7 +61,7 @@ export class UserServiceClient {
       password: password,
       role: role
     };
-    return fetch('http://localhost:4000/api/user', {
+    return fetch('http://desolate-fortress-93443.herokuapp.com/api/user', {
       body: JSON.stringify(user),
       credentials: 'include', // include, same-origin, *omit
       method: 'post',

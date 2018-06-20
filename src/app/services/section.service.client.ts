@@ -1,10 +1,10 @@
 export class SectionServiceClient {
 
-  SECTION_URL = 'http://localhost:4000/api/course/COURSEID/section';
-  DELETE_SECTION_URL = 'http://localhost:4000/api/section';
+  SECTION_URL = 'http://desolate-fortress-93443.herokuapp.com/api/course/COURSEID/section';
+  DELETE_SECTION_URL = 'http://desolate-fortress-93443.herokuapp.com/api/section';
 
   findSectionsForStudent() {
-    const url = 'http://localhost:4000/api/student/section';
+    const url = 'http://desolate-fortress-93443.herokuapp.com/api/student/section';
     return fetch(url, {
       credentials: 'include'
     })
@@ -12,14 +12,14 @@ export class SectionServiceClient {
   }
 
   enrollStudentInSection(sectionId) {
-    const url = 'http://localhost:4000/api/section/' + sectionId + '/enrollment';
+    const url = 'http://desolate-fortress-93443.herokuapp.com/api/section/' + sectionId + '/enrollment';
     return fetch(url, {
       method: 'post',
       credentials: 'include'
     });
   }
   unenrollStudentInSection(sectionId) {
-    const url = 'http://localhost:4000/api/section/' + sectionId + '/unenrollment';
+    const url = 'http://desolate-fortress-93443.herokuapp.com/api/section/' + sectionId + '/unenrollment';
     return fetch(url, {
       method: 'post',
       credentials: 'include'
