@@ -1,0 +1,19 @@
+
+<div class="row">
+  <div *ngFor="let course of courses" class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h4 class="card-title">{{course.title}}</h4>
+        <p *ngIf=" role != null && role != 'admin' && !displayEnroll(course.id)"> Course Grade: {{grade}}</p>
+        <a routerLink="/course/{{course.id}}"
+           class="btn btn-primary">Modules</a>
+        <a *ngIf="role === 'admin'" routerLink="/course/{{course.id}}/section"
+           class="btn btn-primary">Add Section</a>
+        <a *ngIf="role !== 'admin' && role != null && displayEnroll(course.id)" routerLink="/course/{{course.id}}/section"
+             class="btn btn-primary">Enroll</a>
+        <a *ngIf="role !== 'admin' && role != null && !displayEnroll(course.id)"
+           class="btn btn-success">Enrolled</a>
+      </div>
+    </div>
+  </div>
+</div>
