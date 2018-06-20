@@ -5,6 +5,7 @@ The student application consists of a MEAN stack web application meant for stude
 Admin Functionality is also implemented which can create, delete or update sections of the courses
 <br/>
 <br/>
-- The backend of this project is in repository https://github.com/Parmeetsinghsaluja/Course_Manager_Student_Application_Node
+- The backend of this project is in repository: https://github.com/Parmeetsinghsaluja/Course_Manager_Student_Application_Node
 <br/>
-- The application is deployed on heroku http://course-manager-student.herokuapp.com/home
+
+- The application is deployed on heroku: http://course-manager-student.herokuapp.com/home
